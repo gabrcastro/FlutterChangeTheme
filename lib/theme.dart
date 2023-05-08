@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
 
 class AppThemeData {
-  static const Color orange = Color(0xFFFF9100);
-
   var darkTheme = ThemeData(
-      brightness: Brightness.dark,
-      appBarTheme: const AppBarTheme(
-        backgroundColor: orange,
-      ),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        backgroundColor: orange,
-      ),
-      elevatedButtonTheme: const ElevatedButtonThemeData(
-          style: ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll(orange),
-      )));
+    brightness: Brightness.dark,
+    colorScheme: const ColorScheme.dark(
+      primary: Colors.deepPurple,
+      secondary: Colors.blue,
+      onPrimary: Colors.white,
+    ),
+  );
 
   var lightTheme = ThemeData(
     brightness: Brightness.light,
-    appBarTheme: const AppBarTheme(
-      backgroundColor: orange,
-    ),
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: orange,
+    colorScheme: const ColorScheme.light(
+      primary: Colors.deepOrange,
+      secondary: Colors.orange,
+      onPrimary: Colors.white,
     ),
   );
 }

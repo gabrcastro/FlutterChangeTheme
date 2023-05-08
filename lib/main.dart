@@ -34,21 +34,11 @@ class _MyAppState extends State<MyApp> {
     super.dispose();
   }
 
-  void _toggleTheme() {
-    setState(() {
-      _theme = _theme == AppThemeData().lightTheme
-          ? AppThemeData().darkTheme
-          : AppThemeData().lightTheme;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: _theme,
-        home: MyHomePage(
-          title: 'Flutter Theme',
-          toggleTheme: _toggleTheme,
-        ));
+      theme: _theme,
+      home: const MyHomePage(title: 'Flutter Theme'),
+    );
   }
 }
